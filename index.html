@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hello World</title>
+</head>
+<body>
+
+    <div id="application-root"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--my code here-->
+    <script type="text/babel">
+        // LEARN REACT1
+        //const intro = React.createElement('h1', null, 'what up playa?');
+        // const intro = <h1>what up playa?</h1>;
+        // function App(args){
+        //     console.log(props);
+        //     return <span id='app-id' className={props.className}>My App</span>;
+        // };
+
+        // const appRoot = document.querySelector('#application-root');
+        // ReactDOM.render(<div>
+        // <h1>Hello, world!</h1>
+        // <p>How are you today?</p>
+        // <h2>Look what React can do!</h2>
+        // </div>, appRoot);
+
+        // ReactDOM.render(
+        //     <App className='new-class-name'/>, appRoot
+        // );
+
+        // LEARN REACT2
+        // function App(props) {
+        //     console.log(props)
+        //     return (
+        //         <span>
+        //         My App
+        //         </span>
+        //     );
+        //     }
+
+        //     ReactDOM.render(
+        //     <App
+        //         className='new-class-name'
+        //         foo='bar'
+        //         boolProp={false}
+        //         numberProp={123}
+        //         objectProp={{ baz: 'buzz' }}
+        //         arrayProp={[ '3', '2', '1' ]}
+        //     />,
+        //     document.querySelector('#application-root')
+        //     );
+
+        // LEARN REACT3
+        function App(props){
+            console.log(props);
+            return (
+                <div>
+                <header>
+                   <span> {props.children}</span>
+                </header>
+                </div>
+            );
+        };
+
+        ReactDOM.render(
+            <App className='my-app'>
+                <h1>current page title!</h1>
+            </App>,
+            document.querySelector('#application-root')
+        );
+
+
+    </script>
+</body>
+</html>
